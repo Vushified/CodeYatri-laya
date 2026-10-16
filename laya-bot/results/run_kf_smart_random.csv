@@ -1,0 +1,3 @@
+setting,wins,draws,losses,errors,win%,loss%,margin_vs_baseline
+KF-board,48,94,158,0,16.0%,52.7%,-15.0%
+random-control-smart,93,163,44,0,31.0%,14.7%,0.0% (baseline)

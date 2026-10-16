@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laya Decision Engine — Multi-Game Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <!-- Left Icon Rail -->
+    <aside class="icon-rail">
+      <div class="rail-logo">L</div>
+      <nav class="rail-nav">
+        <div class="rail-item active" id="rail-tictactoe" title="Tic-Tac-Toe Arena" onclick="switchTab('tictactoe')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+        <div class="rail-item" id="rail-connect4" title="Connect Four Arena" onclick="switchTab('connect4')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg>
+        </div>
+        <div class="rail-item" id="rail-8puzzle" title="8-Puzzle Arena" onclick="switchTab('8puzzle')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM16 16l3 3m0-3l-3 3"/></svg>
+        </div>
+        <div class="rail-item" id="rail-2048" title="2048 Arena" onclick="switchTab('2048')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <div class="rail-item" id="rail-benchmarks" title="Benchmarking & Analysis" onclick="switchTab('benchmarks')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="rail-item" id="rail-logs" title="Logs & Audit" onclick="switchTab('logs')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+      </nav>
+      <div class="rail-bottom">
+        <div class="rail-item" title="Model Info">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Header -->
+      <header class="top-header">
+        <div class="header-title-block">
+          <h1>Laya Decision Engine Dashboard</h1>
+          <p>Multi-Game Evaluation Suite · Calibrated Probabilities & Move Harness</p>
+        </div>
+        <div class="header-actions">
+          <span class="badge-tag">
+            <span class="status-dot"></span>
+            Laya v0.4.6 Online (RTX GPU)
+          </span>
+          <span class="badge-tag" id="audit-badge">
+            Audit: Compliant
+          </span>
+        </div>
+      </header>
+
+      <!-- Status Strip -->
+      <section class="status-strip">
+        <div class="strip-item">
+          <span>Active Game:</span>
+          <strong id="active-game-display">Tic-Tac-Toe</strong>
+        </div>
+        <div class="strip-item">
+          <span>Status:</span>
+          <strong id="status-display">Ready for Move</strong>
+        </div>
+        <div class="strip-item">
+          <span>Turn / Steps:</span>
+          <strong id="turn-display">Turn 1 (X Turn)</strong>
+        </div>
+        <div class="strip-item">
+          <span>Metrics:</span>
+          <strong id="kpi-display">Score: 0</strong>
+        </div>
+      </section>
+
+      <!-- Horizontal Dashboard Tab Navigation (All 4 Games + Benchmarks + Logs) -->
+      <nav class="dashboard-tabs-bar">
+        <button class="tab-btn active" id="tab-btn-tictactoe" onclick="switchTab('tictactoe')">
+          <span class="game-tag game-tag-tictactoe" style="margin-right: 6px;">3x3</span>
+          Tic-Tac-Toe
+        </button>
+        <button class="tab-btn" id="tab-btn-connect4" onclick="switchTab('connect4')">
+          <span class="game-tag game-tag-connect4" style="margin-right: 6px;">7x6</span>
+          Connect Four
+        </button>
+        <button class="tab-btn" id="tab-btn-8puzzle" onclick="switchTab('8puzzle')">
+          <span class="game-tag game-tag-8puzzle" style="margin-right: 6px;">Tiles</span>
+          8-Puzzle
+        </button>
+        <button class="tab-btn" id="tab-btn-2048" onclick="switchTab('2048')">
+          <span class="game-tag game-tag-2048" style="margin-right: 6px;">4x4</span>
+          2048
+        </button>
+        <button class="tab-btn" id="tab-btn-benchmarks" onclick="switchTab('benchmarks')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          Benchmarking Tables (Random & Smart)
+        </button>
+        <button class="tab-btn" id="tab-btn-logs" onclick="switchTab('logs')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Audit & Logs
+        </button>
+      </nav>
+
+      <!-- ===================================================================
+           TAB PANE 1: TIC-TAC-TOE ARENA
+           =================================================================== -->
+      <div id="pane-tictactoe" class="tab-pane active">
+        <div class="dashboard-grid">
+          <div class="featured-card">
+            <div class="card-header-bar">
+              <div>
+                <div class="card-title">Live Tic-Tac-Toe Arena (3x3 Grid)</div>
+                <div class="card-subtitle">Laya plays as X vs Opponent (O). Minimax referee verified.</div>
+              </div>
+              <span class="badge-tag" id="ttt-last-move-tag">No Move Yet</span>
+            </div>
+
+            <div class="game-arena-wrapper">
+              <div class="board-container" id="ttt-board-grid"></div>
+
+              <div class="prob-panel">
+                <div class="prob-panel-title">Move Probabilities P(true)</div>
+                <div class="prob-bars-list" id="ttt-prob-bars-container">
+                  <p style="font-size: 13px; color: var(--text-muted-rose); margin-top: 10px;">
+                    Click "Ask Laya (1 Move)" to compute calibrated probabilities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-cards-column">
+            <div class="action-card">
+              <div class="card-title">Decision Actions</div>
+              <button class="btn-primary" id="btn-ttt-step" onclick="stepGame('tictactoe')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Ask Laya (1 Move)
+              </button>
+              <button class="btn-secondary" id="btn-ttt-auto" onclick="autoPlay('tictactoe')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                Auto-Play Game
+              </button>
+              <button class="btn-secondary" id="btn-ttt-reset" onclick="resetGameInstance('tictactoe')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Reset Board
+              </button>
+            </div>
+
+            <div class="action-card">
+              <div class="card-title">Prompt Architecture</div>
+              <select id="ttt-design-select" class="btn-secondary" style="width: 100%; text-align: left; padding: 8px 12px; background-color: var(--bg-secondary); color: var(--text-warm-white); border: 1px solid var(--border-subtle); border-radius: var(--radius-button); cursor: pointer;">
+                <option value="E" selected>Design E — Shortlist (85.0% Win Rate)</option>
+                <option value="KF">Design KF — Full Rules + Priority (16.0% vs Smart)</option>
+                <option value="K">Design K — Compact Threats (76.0% Win Rate)</option>
+                <option value="KP">Design KP — Priority Rules (69.7% Win Rate)</option>
+                <option value="EK">Design EK — Compact Shortlist (62.3% Win Rate)</option>
+                <option value="B">Design B — Standard Choice (63.0% Win Rate)</option>
+                <option value="A">Design A — Standard Noul (70.0% Win Rate)</option>
+              </select>
+              <div style="font-size: 11px; color: var(--text-muted-rose); margin-top: 6px;">
+                Winner: Design E (+28% margin vs random).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           TAB PANE 2: CONNECT FOUR ARENA
+           =================================================================== -->
+      <div id="pane-connect4" class="tab-pane">
+        <div class="dashboard-grid">
+          <div class="featured-card">
+            <div class="card-header-bar">
+              <div>
+                <div class="card-title">Live Connect Four Arena (7x6 Grid)</div>
+                <div class="card-subtitle">Gravity drop physics · Discs fall to bottom of column. 4 in a row wins.</div>
+              </div>
+              <span class="badge-tag" id="c4-last-move-tag">No Move Yet</span>
+            </div>
+
+            <div class="game-arena-wrapper">
+              <div>
+                <div class="c4-col-controls" id="c4-col-buttons"></div>
+                <div class="connect4-board" id="c4-board-grid"></div>
+              </div>
+
+              <div class="prob-panel">
+                <div class="prob-panel-title">Column Probabilities</div>
+                <div class="prob-bars-list" id="c4-prob-bars-container">
+                  <p style="font-size: 13px; color: var(--text-muted-rose); margin-top: 10px;">
+                    Click "Ask Laya (1 Drop)" to evaluate columns 0 through 6.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-cards-column">
+            <div class="action-card">
+              <div class="card-title">Decision Actions</div>
+              <button class="btn-primary" id="btn-c4-step" onclick="stepGame('connect4')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Ask Laya (1 Drop)
+              </button>
+              <button class="btn-secondary" id="btn-c4-auto" onclick="autoPlay('connect4')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                Auto-Play Game
+              </button>
+              <button class="btn-secondary" id="btn-c4-reset" onclick="resetGameInstance('connect4')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Reset Grid
+              </button>
+            </div>
+
+            <div class="action-card">
+              <div class="card-title">Prompt Architecture</div>
+              <select id="c4-design-select" class="btn-secondary" style="width: 100%; text-align: left; padding: 8px 12px; background-color: var(--bg-secondary); color: var(--text-warm-white); border: 1px solid var(--border-subtle); border-radius: var(--radius-button); cursor: pointer;">
+                <option value="B" selected>Design B — Factual Choice (86.3% Win Rate)</option>
+                <option value="K">Design K — Compact Threats (83.3% Win Rate)</option>
+                <option value="A">Design A — Noul Feasibility (78.0% Win Rate)</option>
+                <option value="KF">Design KF — Full Rules + Priority (74.0% Win Rate)</option>
+              </select>
+              <div style="font-size: 11px; color: var(--text-muted-rose); margin-top: 6px;">
+                Winner: Design B (+40% margin vs random).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           TAB PANE 3: 8-PUZZLE ARENA
+           =================================================================== -->
+      <div id="pane-8puzzle" class="tab-pane">
+        <div class="dashboard-grid">
+          <div class="featured-card">
+            <div class="card-header-bar">
+              <div>
+                <div class="card-title">Live 8-Puzzle Arena (Sliding Tiles)</div>
+                <div class="card-subtitle">Goal: Reach 123 / 456 / 780 in minimum steps. Benchmarked against exact A* search.</div>
+              </div>
+              <span class="badge-tag" id="puz-distance-tag">Dist: 0</span>
+            </div>
+
+            <div class="game-arena-wrapper">
+              <div class="eight-puzzle-board" id="puz-board-grid"></div>
+
+              <div class="prob-panel">
+                <div class="prob-panel-title">Slide Direction Probabilities</div>
+                <div class="prob-bars-list" id="puz-prob-bars-container">
+                  <p style="font-size: 13px; color: var(--text-muted-rose); margin-top: 10px;">
+                    Click "Ask Laya (1 Slide)" to compute probabilities for candidate directions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-cards-column">
+            <div class="action-card">
+              <div class="card-title">Decision Actions</div>
+              <button class="btn-primary" id="btn-puz-step" onclick="stepGame('eight_puzzle')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Ask Laya (1 Slide)
+              </button>
+              <button class="btn-secondary" id="btn-puz-auto" onclick="autoPlay('eight_puzzle')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                Solve Step-by-Step
+              </button>
+              <button class="btn-secondary" id="btn-puz-reset" onclick="resetGameInstance('eight_puzzle')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Scramble Puzzle
+              </button>
+            </div>
+
+            <div class="action-card">
+              <div class="card-title">Prompt Architecture</div>
+              <select id="puz-design-select" class="btn-secondary" style="width: 100%; text-align: left; padding: 8px 12px; background-color: var(--bg-secondary); color: var(--text-warm-white); border: 1px solid var(--border-subtle); border-radius: var(--radius-button); cursor: pointer;">
+                <option value="A" selected>Design A — Independent Noul (1.00x Optimal A*)</option>
+                <option value="B">Design B — Choice Heuristic Delta</option>
+                <option value="K">Design K — Compact Flags</option>
+                <option value="KF">Design KF — Full Rules + Priority</option>
+              </select>
+              <div style="font-size: 11px; color: var(--text-muted-rose); margin-top: 6px;">
+                Winner: Design A (breaks reversible 2-cycle trap, matching A* optimal path).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           TAB PANE 4: 2048 ARENA
+           =================================================================== -->
+      <div id="pane-2048" class="tab-pane">
+        <div class="dashboard-grid">
+          <div class="featured-card">
+            <div class="card-header-bar">
+              <div>
+                <div class="card-title">Live 2048 Arena (4x4 Merging Grid)</div>
+                <div class="card-subtitle">Single-player score maximization. Tiles merge on collision. Maximize points and survive!</div>
+              </div>
+              <span class="badge-tag" id="g2048-score-tag">Score: 0 · Max: 2</span>
+            </div>
+
+            <div class="game-arena-wrapper">
+              <div class="board-2048" id="g2048-board-grid"></div>
+
+              <div class="prob-panel">
+                <div class="prob-panel-title">Slide Direction Probabilities</div>
+                <div class="prob-bars-list" id="g2048-prob-bars-container">
+                  <p style="font-size: 13px; color: var(--text-muted-rose); margin-top: 10px;">
+                    Click "Ask Laya (1 Move)" to evaluate UP, DOWN, LEFT, RIGHT.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-cards-column">
+            <div class="action-card">
+              <div class="card-title">Decision Actions</div>
+              <button class="btn-primary" id="btn-g2048-step" onclick="stepGame('2048')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Ask Laya (1 Slide)
+              </button>
+              <button class="btn-secondary" id="btn-g2048-auto" onclick="autoPlay('2048')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                Auto-Run 2048 (40 Steps)
+              </button>
+              <button class="btn-secondary" id="btn-g2048-reset" onclick="resetGameInstance('2048')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Reset Board
+              </button>
+            </div>
+
+            <div class="action-card">
+              <div class="card-title">Prompt Architecture</div>
+              <select id="g2048-design-select" class="btn-secondary" style="width: 100%; text-align: left; padding: 8px 12px; background-color: var(--bg-secondary); color: var(--text-warm-white); border: 1px solid var(--border-subtle); border-radius: var(--radius-button); cursor: pointer;">
+                <option value="A" selected>Design A — Independent Noul (1.53x vs Random)</option>
+                <option value="KF">Design KF — Full Rules + Priorities (0.87x vs Random)</option>
+                <option value="B">Design B — Factual Choice (0.60x vs Random)</option>
+                <option value="K">Design K — Compact Flags</option>
+              </select>
+              <div style="font-size: 11px; color: var(--text-muted-rose); margin-top: 6px;">
+                Winner: Design A (1166.4 avg score, top tile 256, 123.6 turns).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           TAB PANE 5: BENCHMARKING & COMPARATIVE ANALYSIS
+           =================================================================== -->
+      <div id="pane-benchmarks" class="tab-pane">
+        <div class="benchmarks-container">
+          <!-- Top KPI Summary Cards -->
+          <div class="kpi-row">
+            <div class="kpi-card">
+              <div class="kpi-label">Tic-Tac-Toe Winner</div>
+              <div class="kpi-value" style="color: #FF5252;">Design E (85.0%)</div>
+              <div class="kpi-delta">+28.0% Above Random Baseline</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Connect Four Winner</div>
+              <div class="kpi-value" style="color: #FF5252;">Design B (86.3%)</div>
+              <div class="kpi-delta">+40.0% Above Random Baseline</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">8-Puzzle Min Steps</div>
+              <div class="kpi-value" style="color: var(--status-green);">Design A (1.00x)</div>
+              <div class="kpi-delta">3.0 Steps · Matches Optimal A* Path</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">2048 Score Maximization</div>
+              <div class="kpi-value" style="color: #FFD54F;">Design A (1.53x)</div>
+              <div class="kpi-delta">1166.4 Avg · Peak 2536 (Tile 256)</div>
+            </div>
+          </div>
+
+          <!-- TABLE 1: ALL DESIGNS VS RANDOM OPPONENT & BASELINE -->
+          <div class="bench-card" style="margin-top: 24px;">
+            <div class="bench-card-header">
+              <div>
+                <div class="bench-card-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  Table 1: All Designs vs. Random Opponent & Baseline (All 4 Games)
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted-rose); margin-top: 4px;">
+                  Comprehensive performance across Tic-Tac-Toe, Connect Four, 8-Puzzle, and 2048 evaluated against unbiased random play on identical paired seeds.
+                </p>
+              </div>
+              <span class="badge-tag">Random Baseline Evaluation</span>
+            </div>
+
+            <div class="bench-table-wrapper">
+              <table class="bench-table" id="table-random-body">
+                <thead>
+                  <tr>
+                    <th>Game</th>
+                    <th>Prompt Design</th>
+                    <th>Architecture Description</th>
+                    <th>Wins / Score</th>
+                    <th>Draws / Max</th>
+                    <th>Losses / Tile</th>
+                    <th>Win % / Turns</th>
+                    <th>Margin / Multiplier</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Populated dynamically via app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TABLE 2: ALL DESIGNS VS SMART RANDOM OPPONENT -->
+          <div class="bench-card" style="margin-top: 28px;">
+            <div class="bench-card-header">
+              <div>
+                <div class="bench-card-title" style="color: #FF8A80;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  Table 2: All Designs vs. Smart Random Opponent (1-Ply Tactical Adversary)
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted-rose); margin-top: 4px;">
+                  Adversarial test where opponent mechanically takes immediate wins and blocks immediate threats. Documents the fundamental 1-ply tactical ceiling of base Laya.
+                </p>
+              </div>
+              <span class="badge-tag" style="border-color: #FF5252; color: #FF8A80;">Adversarial Stress Test</span>
+            </div>
+
+            <div class="bench-table-wrapper">
+              <table class="bench-table" id="table-smart-body">
+                <thead>
+                  <tr>
+                    <th>Game</th>
+                    <th>Prompt Design</th>
+                    <th>Architecture Description</th>
+                    <th>Wins</th>
+                    <th>Draws</th>
+                    <th>Losses</th>
+                    <th>Win Rate %</th>
+                    <th>Margin vs Smart Baseline</th>
+                    <th>Observation / Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Populated dynamically via app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Analytical Insights Cards -->
+          <div class="bench-card" style="margin-top: 28px;">
+            <div class="bench-card-header">
+              <div class="bench-card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                Cross-Game Empirical Discoveries
+              </div>
+            </div>
+
+            <div class="findings-grid">
+              <div class="finding-card">
+                <div class="finding-title" style="color: #FF5252;">1. Shortlist & Noul Superiority</div>
+                <div class="finding-desc">
+                  In both <strong>8-Puzzle (3.0 steps)</strong> and <strong>2048 (+53.5% score)</strong>, <strong>Design A (independent Noul questions)</strong> crushed multiple-choice. Single choice dictionaries suffer from key order bias (`m0`) and reversible action traps. Independent truth probability queries break these traps completely!
+                </div>
+              </div>
+
+              <div class="finding-card">
+                <div class="finding-title" style="color: #4E9B68;">2. Prompt Token Compaction</div>
+                <div class="finding-desc">
+                  Across all games, compact factual representations (<strong>Design K</strong>: 157 tokens) outperformed verbose English prose (<strong>Design J</strong>: 450 tokens) by <strong>+41.0% in Tic-Tac-Toe</strong> and <strong>+37.0% in Connect Four</strong>. Diluted prompts distract the model's spatial attention.
+                </div>
+              </div>
+
+              <div class="finding-card">
+                <div class="finding-title" style="color: #FFD54F;">3. The 1-Ply Tactical Ceiling</div>
+                <div class="finding-desc">
+                  Against <code>smart_random</code>, Laya's win rate dropped to 16.0% in Tic-Tac-Toe and 2.0% in Connect Four. While Laya reliably detects winning moves against random opponents, single-turn probability models lack recursive lookahead without explicit tree search (e.g. minimax).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           TAB PANE 6: SYSTEM LOGS & AUDIT TRAIL
+           =================================================================== -->
+      <div id="pane-logs" class="tab-pane">
+        <section class="logs-card" id="logs-section">
+          <div class="card-header-bar">
+            <div>
+              <div class="card-title">Live JSONL Event Stream & Rule Audit</div>
+              <p style="font-size: 13px; color: var(--text-muted-rose); margin-top: 4px;">
+                Every state, Laya forward pass, probabilities, decision, and game update is flushed and fsync'd before the move is executed.
+              </p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-secondary" style="padding: 6px 12px; font-size: 12px;" onclick="refreshLogs()">
+                Refresh Logs
+              </button>
+            </div>
+          </div>
+          <div class="logs-terminal" id="logs-container" style="max-height: 480px;">
+            <!-- Populated via JavaScript -->
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

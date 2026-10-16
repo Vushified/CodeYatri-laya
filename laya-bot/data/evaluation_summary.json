@@ -1,0 +1,30 @@
+{
+  "tune_results": {
+    "Design A (noul + facts)": {
+      "rate": 0.5,
+      "chance": 0.5676190476190475
+    },
+    "Design B (choice best)": {
+      "rate": 0.54,
+      "chance": 0.5676190476190475
+    },
+    "Design C (noul, board only)": {
+      "rate": 0.58,
+      "chance": 0.5676190476190475
+    },
+    "Design D (noul + facts + history)": {
+      "rate": 0.52,
+      "chance": 0.5676190476190475
+    }
+  },
+  "best_design": "Design C (noul, board only)",
+  "test_result": {
+    "rate": 0.42,
+    "chance": 0.5041904761904761
+  },
+  "game_record_100": {
+    "X": 67,
+    "O": 13,
+    "draw": 20
+  }
+}

@@ -1,0 +1,1385 @@
+[
+  {
+    "board": [
+      " ",
+      "O",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      4
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_001"
+  },
+  {
+    "board": [
+      " ",
+      "O",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      4,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_002"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      7,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_003"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      0,
+      2,
+      3
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_004"
+  },
+  {
+    "board": [
+      "O",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      3,
+      4,
+      6,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_005"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      2,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_006"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      6
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_007"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X",
+      "O",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_008"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_009"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      4,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_010"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      4,
+      6
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_011"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      4,
+      6
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_012"
+  },
+  {
+    "board": [
+      "X",
+      "O",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      3,
+      4,
+      6
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_013"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      2,
+      4,
+      6
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_014"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "test_015"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "X",
+      "X",
+      " ",
+      "O",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      5,
+      8
+    ],
+    "optimal_moves": [
+      5,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_016"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      "X",
+      " ",
+      "O",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      4,
+      6
+    ],
+    "optimal_moves": [
+      4,
+      6
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_017"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      "O",
+      "X",
+      " ",
+      " ",
+      "O",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      4,
+      5,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_018"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      " ",
+      "O",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      3,
+      5,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      3,
+      5,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_019"
+  },
+  {
+    "board": [
+      "O",
+      "X",
+      " ",
+      " ",
+      " ",
+      "X",
+      "O",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      2,
+      3,
+      4,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      2,
+      3,
+      4,
+      7,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_020"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      "X",
+      "O",
+      " ",
+      " ",
+      " ",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      4,
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      4,
+      5,
+      6,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_021"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      "O",
+      "X",
+      " ",
+      " ",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      6
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_022"
+  },
+  {
+    "board": [
+      " ",
+      "X",
+      "O",
+      " ",
+      "X",
+      "O",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      3,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      7,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_023"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      3,
+      4,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_024"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "X",
+      "X",
+      " ",
+      " ",
+      "O",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      5,
+      6
+    ],
+    "optimal_moves": [
+      5,
+      6
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_025"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      1,
+      2,
+      4,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      5
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_026"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      "X",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      4,
+      7
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      2,
+      4,
+      7
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_027"
+  },
+  {
+    "board": [
+      " ",
+      "O",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      3,
+      4,
+      5,
+      6
+    ],
+    "optimal_moves": [
+      4,
+      5
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_028"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "X",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      3,
+      4,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_029"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "X",
+      "X",
+      "O",
+      "O",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_030"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "X",
+      "O",
+      " ",
+      "O",
+      "X",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      4,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_031"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "O",
+      "X",
+      " ",
+      "X",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      5,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      2,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_032"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "X",
+      " ",
+      "O",
+      " ",
+      " ",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      1,
+      3,
+      5,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      5,
+      6,
+      7
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_033"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "O",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      3,
+      5,
+      6
+    ],
+    "optimal_moves": [
+      6
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_034"
+  },
+  {
+    "board": [
+      " ",
+      "X",
+      " ",
+      "X",
+      "O",
+      " ",
+      " ",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      0
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_035"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      3,
+      5,
+      8
+    ],
+    "optimal_moves": [
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_036"
+  },
+  {
+    "board": [
+      " ",
+      "X",
+      "O",
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      3,
+      4,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      3,
+      4,
+      6,
+      7
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_037"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      3,
+      4,
+      6
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_038"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      3,
+      4,
+      6
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_039"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      "X",
+      " ",
+      "O",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      3,
+      6
+    ],
+    "optimal_moves": [
+      2
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "test_040"
+  },
+  {
+    "board": [
+      "X",
+      "O",
+      "X",
+      "O",
+      " ",
+      " ",
+      " ",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      4,
+      5,
+      6
+    ],
+    "optimal_moves": [
+      4,
+      5,
+      6
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_041"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      "O",
+      "O",
+      "O",
+      " ",
+      "X",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      1,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      7
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_042"
+  },
+  {
+    "board": [
+      "O",
+      "X",
+      "O",
+      "X",
+      "X",
+      " ",
+      " ",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      5
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_043"
+  },
+  {
+    "board": [
+      "O",
+      "X",
+      "O",
+      " ",
+      " ",
+      "X",
+      "X",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      3,
+      4,
+      8
+    ],
+    "optimal_moves": [
+      3,
+      4,
+      8
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_044"
+  },
+  {
+    "board": [
+      "X",
+      "O",
+      " ",
+      "X",
+      "X",
+      "O",
+      " ",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      2,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      6
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_045"
+  },
+  {
+    "board": [
+      "O",
+      "X",
+      "O",
+      "O",
+      "X",
+      "O",
+      "X",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      7
+    ],
+    "optimal_moves": [
+      7
+    ],
+    "x_count": 4,
+    "empty_count": 1,
+    "id": "test_046"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      "X",
+      "O",
+      "X",
+      "O",
+      " ",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      1,
+      6,
+      7
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_047"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "X",
+      " ",
+      "O",
+      "O",
+      "X",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      3,
+      8
+    ],
+    "optimal_moves": [
+      8
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_048"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "X",
+      "O",
+      " ",
+      "O",
+      "O",
+      "X",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      4
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      4
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_049"
+  },
+  {
+    "board": [
+      "X",
+      "X",
+      " ",
+      " ",
+      "O",
+      "X",
+      "O",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      2,
+      3,
+      7
+    ],
+    "optimal_moves": [
+      2
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "test_050"
+  }
+]

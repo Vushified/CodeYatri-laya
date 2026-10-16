@@ -1,0 +1,6 @@
+setting,wins,draws,losses,errors,win%,loss%,margin_vs_baseline
+E-board,48,22,230,0,16.0%,76.7%,-15.0%
+KP-board,13,66,221,0,4.3%,73.7%,-26.7%
+EK-board,0,0,300,0,0.0%,100.0%,-31.0%
+K-board,0,47,253,0,0.0%,84.3%,-31.0%
+random-control-smart,93,163,44,0,31.0%,14.7%,0.0% (baseline)

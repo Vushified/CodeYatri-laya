@@ -1,0 +1,309 @@
+UI Design Breakdown: Dark Burgundy Gaming Dashboard
+This dashboard follows a premium dark gaming aesthetic with a burgundy-red colour palette, glass-like panels, subtle borders, rounded cards, and cinematic artwork. It combines the visual feel of a gaming launcher with a modern analytics dashboard.
+You can reuse this design language for an admin dashboard, AI dashboard, analytics platform, cybersecurity tool, or personal project dashboard by keeping the same styling while adapting the content.
+1. Overall visual style
+
+
+
+
+
+
+
+dribbble.com
+
+
+
+Dark luxury / cinematic gaming UI
+The interface uses a dark wine-red background instead of pure black. This creates a warmer, richer atmosphere while keeping the content readable.
+
+
+
+Layered glass panels
+Transparent-looking burgundy cards sit on top of a darker background. Thin, muted borders distinguish each section without creating a cluttered appearance.
+
+
+
+Cinematic red accents
+Bright red is reserved for highlighted actions, active navigation, featured content, badges, and important visual elements.
+
+
+
+2. Colour palette
+The following are approximate colours sampled visually from the reference style. They are practical starting values for recreating the theme, rather than exact extracted pixel measurements.
+Core colours
+
+Deep wine background
+Main page background
+
+#35110F
+
+Dark burgundy
+Outer shell and sidebar
+
+#481816
+
+Panel burgundy
+Cards and navigation panels
+
+#652A27
+
+Muted red-brown
+Secondary surfaces and hover states
+
+#783A35
+
+Accent red
+Primary buttons and active elements
+
+#D52B27
+
+Warm white
+Headings and important text
+
+#F8F0ED
+
+Muted rose
+Descriptions and secondary labels
+
+#C7A7A1
+
+Subtle border
+Panel outlines and separators
+
+#98635D
+
+Recommended colour balance
+- 65–75% dark backgrounds and surfaces.
+- 15–25% lighter burgundy panels.
+- 5–10% bright red accents, imagery and status indicators.
+Keep red selective. If every card, heading, icon and button is bright red, the interface loses its premium feel.
+3. Layout and structure
+The reference image has a desktop-first dashboard organised into four main areas.
+Top header
+Greeting · Search · Utility actions
+
+
+Activity / status strip
+Avatars · Presence · Quick access
+
+Featured content area
+Large visual card + smaller linked cards
+
+Activity cards
+Recent events
+
+
+Statistics
+KPIs and progress
+
+
+
+
+
+Simplified structural diagram showing the reference dashboard's layout.
+
+How to adapt this layout to your dashboard
+Reference component	Dashboard equivalent
+Greeting header	Welcome message, global search, profile and notifications
+Left icon rail	Main navigation menu
+Avatar strip	Active users, recent activity or quick filters
+Large featured card	Main project, critical alert or highlighted insight
+Right-side game cards	Recent projects, quick links or recommended actions
+Latest Activities	Recent events, tasks or system logs
+Your Statistics	KPI cards, charts, completion rates and summaries
+For a data-heavy dashboard, make the featured card a prominent overview panel rather than a large decorative image.
+4. Typography
+The reference uses a clean, modern sans-serif typeface with a strong contrast between headings and secondary information.
+PAGE HEADING · 26–32 PX
+Welcome back, Vidushi
+
+
+SECTION HEADING · 16–20 PX
+System Overview
+
+
+BODY TEXT · 13–15 PX
+Monitor performance, track recent events and explore the latest system insights.
+
+
+METADATA · 11–12 PX
+Updated 2 minutes ago · Last synchronised successfully
+
+
+Suggested fonts: Inter, Manrope, or Plus Jakarta Sans. Use medium or semibold weights for headings and regular weights for descriptions. Avoid excessive uppercase labels.
+5. Cards, borders and rounded corners
+The cards are a defining feature of this design. They feel cohesive because they share the same radius, border colour and background family.
+Total Projects
+128
++12.4%
+
+
+Standard KPI card
+Secure
+
+System Health
+All monitored services are operational.
+
+Status card
+
+Recommended design tokens:
+- Card radius: 10–16 px.
+- Main dashboard shell radius: 24–32 px.
+- Borders: 1 px, muted red-brown.
+- Internal spacing: 16–24 px.
+- Card gaps: 12–16 px.
+- Shadows: very subtle or none; rely on colour contrast and borders.
+- Hover state: slightly lighter burgundy, brighter border and smooth transition.
+The reference has a faint glass-like finish, but it does not need heavy blur or pronounced shadows. Flat surfaces will usually look cleaner and perform better.
+6. Icons and navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12
+
+
+
+
+
+
+
+
+
+Use thin, consistent outline icons rather than mixing filled, outlined and 3D icons.
+- Default icons: warm white or muted rose.
+- Active icon: white on a bright red or orange-red rounded square.
+- Hovered icon: brighter white with a slightly lighter panel.
+- Status indicators: small green dots for online, red for critical, and amber for warnings.
+A sidebar width of around 64–80 px recreates the compact icon rail. If your dashboard has many navigation items, use a wider 220–250 px sidebar with text labels instead.
+7. Images and visual assets
+The reference relies on cinematic artwork to make the interface feel immersive. Its visual assets have warm highlights, dark shadows, muted colours and strong red tones.
+
+
+
+
+
+
+
+
+
+Large feature cards
+Use one dominant image with a dark overlay, a readable title and one primary action. Keep the image visually rich, but don't let it compete with the text.
+
+
+
+
+
+
+
+
+
+
+
+Activity thumbnails
+Use consistent aspect ratios and subtle borders. Crop images consistently so the card grid looks orderly.
+
+
+
+
+
+
+
+
+
+
+
+Background texture
+Use a very subtle dark-red texture or vignette behind the main layout. Keep it low contrast so that text, tables and charts remain legible.
+
+
+
+For a professional analytics or cybersecurity dashboard, replace game artwork with restrained visualisations, maps, system diagrams or project thumbnails. Keep the same rounded-card and colour treatment.
+8. Interaction and animation
+The interface feels polished because the controls appear interactive without adding visual clutter. Recreate that behaviour with small, consistent transitions.
+Element	Recommended behaviour
+Sidebar icons	Highlight the active page; show tooltips
+Cards	Slight border brightening on hover
+Search bar	Burgundy focus ring and clear keyboard focus
+Primary buttons	Bright red with a subtle hover change
+Status badges	Use small dots and concise labels
+Charts	Reveal detailed values on hover
+Loading states	Use restrained skeleton loaders or progress indicators
+Use transitions of approximately 150–220 ms. Avoid large scaling effects, constant pulsing, and excessive glowing borders.
+9. Responsive behaviour
+The screenshot is designed for a wide desktop screen, so adapt the structure instead of simply shrinking everything.
+- Desktop: compact icon rail, wide header, two-column content and a large feature card.
+- Tablet: reduce the number of cards per row, hide secondary utility actions and shorten the featured content area.
+- Mobile: replace the icon rail with a collapsible menu or bottom navigation; stack the cards vertically and keep KPI cards in a two-column grid when space allows.
+10. Ready-to-use design specification
+You can use the following brief when implementing the dashboard in React, Next.js, Tailwind CSS or another frontend framework.
+Dashboard UI Design System — Dark Burgundy
+Design direction: Premium, cinematic, dark gaming-inspired dashboard with subtle glass-like surfaces and restrained red accents.
+Background
+- Main background: #35110F
+- Outer shell/sidebar: #481816
+- Main card surface: #652A27
+- Secondary surface: #783A35
+Accent colours
+- Primary action: #D52B27
+- Main text: #F8F0ED
+- Secondary text: #C7A7A1
+- Borders: #98635D
+- Success: muted green
+- Warning: muted amber
+- Error: accessible bright red
+Layout
+- Desktop-first dashboard with a compact left navigation rail.
+- Top header containing a welcome message, search bar and utility controls.
+- Secondary status/activity strip.
+- Main content area with a large featured panel and smaller related cards.
+- Lower section with activity cards and KPI/statistics panels.
+- Responsive grid that collapses into stacked sections on smaller screens.
+Component styling
+- Rounded cards: 10–16 px radius.
+- Main shell: 24–32 px radius on large screens.
+- Borders: 1 px solid muted burgundy.
+- Card padding: 16–24 px.
+- Grid gaps: 12–16 px.
+- Shadows: subtle, with no exaggerated depth.
+- Glass effect: optional restrained translucency; preserve text contrast.
+Typography
+- Font: Inter, Manrope or Plus Jakarta Sans.
+- Page title: 26–32 px, semibold.
+- Section headings: 16–20 px, semibold.
+- Body: 13–15 px.
+- Metadata: 11–12 px.
+- Use warm-white headings and muted rose secondary text.
+Icons and interactions
+- Consistent outline icon family.
+- Active navigation uses a red rounded-square background.
+- Hover states brighten the border and surface.
+- Keyboard focus must remain clearly visible.
+- Use 150–220 ms transitions.
+- Keep status indicators and primary actions visually distinct.
+Visual assets
+- Use cinematic, warm-toned thumbnails only where relevant.
+- Prefer charts, system visualisations and project previews for data-heavy dashboards.
+- Avoid generic stock illustrations and excessive decorative gradients.
+Accessibility and usability
+- Maintain readable text contrast.
+- Do not rely on colour alone for status communication.
+- Provide labels or tooltips for icon-only navigation.
+- Ensure keyboard navigation, responsive layouts and reduced-motion support.
+Overall objective: Preserve the reference's dark burgundy atmosphere, rounded modular layout, cinematic visual hierarchy and minimal outline iconography while making the dashboard practical, accessible and easy to scan.

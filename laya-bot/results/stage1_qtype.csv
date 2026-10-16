@@ -1,0 +1,8 @@
+setting,wins,draws,losses,errors,win%,loss%
+E-board,225,15,60,0,75.0%,20.0%
+A-good-board,220,23,57,0,73.3%,19.0%
+B-board,216,13,71,0,72.0%,23.7%
+D-good-board,215,21,64,0,71.7%,21.3%
+C-board,164,19,117,0,54.7%,39.0%
+F-good-board,163,51,86,0,54.3%,28.7%
+random-control,182,37,81,0,60.7%,27.0%

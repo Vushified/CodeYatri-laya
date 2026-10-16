@@ -1,0 +1,3 @@
+setting,wins,draws,losses,errors,win%,loss%,margin_vs_baseline
+E-board,50,14,236,0,16.7%,78.7%,-13.7%
+random-control-smart,91,166,43,0,30.3%,14.3%,0.0% (baseline)

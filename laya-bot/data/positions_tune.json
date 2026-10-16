@@ -1,0 +1,1406 @@
+[
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      4,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_001"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "x_count": 0,
+    "empty_count": 9,
+    "id": "tune_002"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "O",
+      "X",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      2,
+      6,
+      7,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_003"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_004"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      "O",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      2,
+      4,
+      7,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_005"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_006"
+  },
+  {
+    "board": [
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_007"
+  },
+  {
+    "board": [
+      " ",
+      "O",
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      2,
+      4
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_008"
+  },
+  {
+    "board": [
+      " ",
+      "O",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      2,
+      4,
+      6
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_009"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      2,
+      6
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_010"
+  },
+  {
+    "board": [
+      " ",
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      8
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_011"
+  },
+  {
+    "board": [
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      2
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_012"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      2,
+      6
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_013"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      4,
+      6,
+      7
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_014"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      2
+    ],
+    "x_count": 1,
+    "empty_count": 7,
+    "id": "tune_015"
+  },
+  {
+    "board": [
+      " ",
+      "X",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      2,
+      4,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      2,
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_016"
+  },
+  {
+    "board": [
+      " ",
+      "O",
+      " ",
+      " ",
+      " ",
+      "X",
+      "X",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      2,
+      3,
+      4,
+      8
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_017"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      2,
+      4,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      2
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_018"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      1,
+      3,
+      4,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      1,
+      3,
+      4,
+      6,
+      7
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_019"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      "O",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      3,
+      4,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_020"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      "X",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      4,
+      5,
+      8
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_021"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      " ",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      1,
+      2,
+      4,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      2,
+      6
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_022"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "X",
+      "X",
+      " ",
+      "O",
+      " ",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      4,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_023"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      1,
+      2,
+      4,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_024"
+  },
+  {
+    "board": [
+      "O",
+      "O",
+      "X",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      4,
+      5,
+      7,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_025"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "X",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      3,
+      4,
+      5,
+      6
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_026"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_027"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "O",
+      "X",
+      " ",
+      " ",
+      " ",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      4,
+      5,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      4,
+      5,
+      6,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_028"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "X",
+      " ",
+      "X",
+      "O",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      3,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      6,
+      7
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_029"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      "O",
+      "X",
+      " ",
+      "X",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      5,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      2,
+      7,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_030"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "X",
+      "O",
+      " ",
+      "O",
+      " ",
+      " ",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      4,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_031"
+  },
+  {
+    "board": [
+      " ",
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      " ",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      2,
+      3,
+      5,
+      6
+    ],
+    "optimal_moves": [
+      0,
+      2,
+      3,
+      5
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_032"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "O",
+      " ",
+      "X",
+      " ",
+      "O",
+      "X"
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      4,
+      6
+    ],
+    "optimal_moves": [
+      0,
+      2,
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_033"
+  },
+  {
+    "board": [
+      "O",
+      "X",
+      "X",
+      " ",
+      " ",
+      "O",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_034"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      "X",
+      " ",
+      "O",
+      " ",
+      "X",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      3,
+      5,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_035"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      "O",
+      "O",
+      " ",
+      "X",
+      " ",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      4,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      4,
+      6
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_036"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "O",
+      "X",
+      "O",
+      " ",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      6,
+      8
+    ],
+    "optimal_moves": [
+      0,
+      1,
+      2,
+      6,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_037"
+  },
+  {
+    "board": [
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      "O",
+      "O",
+      "X",
+      " "
+    ],
+    "legal_moves": [
+      0,
+      1,
+      2,
+      4,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_038"
+  },
+  {
+    "board": [
+      "X",
+      "O",
+      " ",
+      " ",
+      " ",
+      " ",
+      "X",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      2,
+      3,
+      4
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_039"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      " ",
+      "O",
+      "X",
+      "O",
+      " ",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      2,
+      6,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      1,
+      2,
+      6,
+      7,
+      8
+    ],
+    "x_count": 2,
+    "empty_count": 5,
+    "id": "tune_040"
+  },
+  {
+    "board": [
+      "X",
+      "X",
+      " ",
+      " ",
+      "O",
+      "X",
+      "O",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      2,
+      3,
+      8
+    ],
+    "optimal_moves": [
+      2
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_041"
+  },
+  {
+    "board": [
+      " ",
+      "O",
+      "X",
+      "X",
+      "X",
+      "O",
+      " ",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      0,
+      6,
+      7
+    ],
+    "optimal_moves": [
+      6
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_042"
+  },
+  {
+    "board": [
+      "X",
+      "X",
+      "O",
+      " ",
+      " ",
+      "X",
+      " ",
+      "O",
+      "O"
+    ],
+    "legal_moves": [
+      3,
+      4,
+      6
+    ],
+    "optimal_moves": [
+      6
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_043"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      "O",
+      "O",
+      "X",
+      "O",
+      "X",
+      " ",
+      " "
+    ],
+    "legal_moves": [
+      1,
+      7,
+      8
+    ],
+    "optimal_moves": [
+      8
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_044"
+  },
+  {
+    "board": [
+      "X",
+      "X",
+      "O",
+      " ",
+      " ",
+      "X",
+      "O",
+      "O",
+      " "
+    ],
+    "legal_moves": [
+      3,
+      4,
+      8
+    ],
+    "optimal_moves": [
+      3,
+      4,
+      8
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_045"
+  },
+  {
+    "board": [
+      "X",
+      "O",
+      " ",
+      "O",
+      "X",
+      " ",
+      " ",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      2,
+      5,
+      6
+    ],
+    "optimal_moves": [
+      2,
+      5,
+      6
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_046"
+  },
+  {
+    "board": [
+      "X",
+      "O",
+      "X",
+      "O",
+      " ",
+      "O",
+      "X",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      4
+    ],
+    "optimal_moves": [
+      4
+    ],
+    "x_count": 4,
+    "empty_count": 1,
+    "id": "tune_047"
+  },
+  {
+    "board": [
+      "O",
+      " ",
+      " ",
+      "O",
+      "X",
+      "X",
+      "X",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      2,
+      7
+    ],
+    "optimal_moves": [
+      1,
+      2,
+      7
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_048"
+  },
+  {
+    "board": [
+      "X",
+      "X",
+      " ",
+      "O",
+      " ",
+      " ",
+      "O",
+      "X",
+      "O"
+    ],
+    "legal_moves": [
+      2,
+      4,
+      5
+    ],
+    "optimal_moves": [
+      2,
+      4,
+      5
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_049"
+  },
+  {
+    "board": [
+      "X",
+      " ",
+      "X",
+      "X",
+      "O",
+      " ",
+      "O",
+      " ",
+      "O"
+    ],
+    "legal_moves": [
+      1,
+      5,
+      7
+    ],
+    "optimal_moves": [
+      1
+    ],
+    "x_count": 3,
+    "empty_count": 3,
+    "id": "tune_050"
+  }
+]

@@ -1,0 +1,5 @@
+setting,wins,draws,losses,errors,win%,loss%,margin_vs_baseline
+B,6,0,294,0,2.0%,98.0%,-50.3%
+K,3,0,297,0,1.0%,99.0%,-51.3%
+KF,0,0,300,0,0.0%,100.0%,-52.3%
+random-control-smart,157,6,137,0,52.3%,45.7%,0.0% (baseline)
